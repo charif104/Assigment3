@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pricePerLiter = new System.Windows.Forms.TextBox();
+            this.fuelAmount = new System.Windows.Forms.TextBox();
+            this.prevRead = new System.Windows.Forms.TextBox();
+            this.CurRead = new System.Windows.Forms.TextBox();
+            this.calFuel = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.costPerKm = new System.Windows.Forms.Label();
+            this.litPerSweMil = new System.Windows.Forms.Label();
+            this.litPerMetMile = new System.Windows.Forms.Label();
+            this.litPerKm = new System.Windows.Forms.Label();
+            this.kmPerLiter = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.pricePerLiter);
+            this.groupBox1.Controls.Add(this.fuelAmount);
+            this.groupBox1.Controls.Add(this.prevRead);
+            this.groupBox1.Controls.Add(this.CurRead);
+            this.groupBox1.Controls.Add(this.calFuel);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -71,6 +71,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fuel";
             // 
+            // pricePerLiter
+            // 
+            this.pricePerLiter.Location = new System.Drawing.Point(222, 113);
+            this.pricePerLiter.Name = "pricePerLiter";
+            this.pricePerLiter.Size = new System.Drawing.Size(100, 20);
+            this.pricePerLiter.TabIndex = 8;
+            // 
+            // fuelAmount
+            // 
+            this.fuelAmount.Location = new System.Drawing.Point(222, 81);
+            this.fuelAmount.Name = "fuelAmount";
+            this.fuelAmount.Size = new System.Drawing.Size(100, 20);
+            this.fuelAmount.TabIndex = 7;
+            // 
+            // prevRead
+            // 
+            this.prevRead.Location = new System.Drawing.Point(222, 55);
+            this.prevRead.Name = "prevRead";
+            this.prevRead.Size = new System.Drawing.Size(100, 20);
+            this.prevRead.TabIndex = 6;
+            // 
+            // CurRead
+            // 
+            this.CurRead.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.CurRead.Location = new System.Drawing.Point(222, 29);
+            this.CurRead.Name = "CurRead";
+            this.CurRead.Size = new System.Drawing.Size(100, 20);
+            this.CurRead.TabIndex = 5;
+            // 
+            // calFuel
+            // 
+            this.calFuel.Location = new System.Drawing.Point(50, 147);
+            this.calFuel.Name = "calFuel";
+            this.calFuel.Size = new System.Drawing.Size(114, 23);
+            this.calFuel.TabIndex = 4;
+            this.calFuel.Text = "Calculate";
+            this.calFuel.UseVisualStyleBackColor = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -79,7 +117,6 @@
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Price Per liter";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -110,11 +147,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.costPerKm);
+            this.groupBox2.Controls.Add(this.litPerSweMil);
+            this.groupBox2.Controls.Add(this.litPerMetMile);
+            this.groupBox2.Controls.Add(this.litPerKm);
+            this.groupBox2.Controls.Add(this.kmPerLiter);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -127,51 +164,45 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Results";
             // 
-            // button1
+            // costPerKm
             // 
-            this.button1.Location = new System.Drawing.Point(50, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.costPerKm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.costPerKm.Location = new System.Drawing.Point(223, 170);
+            this.costPerKm.Name = "costPerKm";
+            this.costPerKm.Size = new System.Drawing.Size(100, 27);
+            this.costPerKm.TabIndex = 9;
             // 
-            // label5
+            // litPerSweMil
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Fuel Consumption(km/lit)";
+            this.litPerSweMil.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.litPerSweMil.Location = new System.Drawing.Point(223, 129);
+            this.litPerSweMil.Name = "litPerSweMil";
+            this.litPerSweMil.Size = new System.Drawing.Size(100, 23);
+            this.litPerSweMil.TabIndex = 8;
             // 
-            // label6
+            // litPerMetMile
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Fuel Consumption(lit/km)";
+            this.litPerMetMile.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.litPerMetMile.Location = new System.Drawing.Point(223, 92);
+            this.litPerMetMile.Name = "litPerMetMile";
+            this.litPerMetMile.Size = new System.Drawing.Size(100, 26);
+            this.litPerMetMile.TabIndex = 7;
             // 
-            // label7
+            // litPerKm
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 92);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Fuel Consumption(lit/metric mile)";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.litPerKm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.litPerKm.Location = new System.Drawing.Point(223, 61);
+            this.litPerKm.Name = "litPerKm";
+            this.litPerKm.Size = new System.Drawing.Size(100, 23);
+            this.litPerKm.TabIndex = 6;
             // 
-            // label8
+            // kmPerLiter
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 129);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(145, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Fuel Consumption(lit/Swe mil)";
+            this.kmPerLiter.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.kmPerLiter.Location = new System.Drawing.Point(223, 32);
+            this.kmPerLiter.Name = "kmPerLiter";
+            this.kmPerLiter.Size = new System.Drawing.Size(100, 23);
+            this.kmPerLiter.TabIndex = 5;
             // 
             // label9
             // 
@@ -182,74 +213,41 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Cost per Kilometer";
             // 
-            // label10
+            // label8
             // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Location = new System.Drawing.Point(223, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 5;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 129);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(145, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Fuel Consumption(lit/Swe mil)";
             // 
-            // label11
+            // label7
             // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(223, 61);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 23);
-            this.label11.TabIndex = 6;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 92);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Fuel Consumption(lit/metric mile)";
             // 
-            // label12
+            // label6
             // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(223, 92);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 26);
-            this.label12.TabIndex = 7;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Fuel Consumption(lit/km)";
             // 
-            // label13
+            // label5
             // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Location = new System.Drawing.Point(223, 129);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 23);
-            this.label13.TabIndex = 8;
-            // 
-            // label14
-            // 
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Location = new System.Drawing.Point(223, 170);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 27);
-            this.label14.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(222, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(222, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(222, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(222, 113);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Fuel Consumption(km/lit)";
             // 
             // MainForm
             // 
@@ -276,21 +274,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button calFuel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox pricePerLiter;
+        private System.Windows.Forms.TextBox fuelAmount;
+        private System.Windows.Forms.TextBox prevRead;
+        private System.Windows.Forms.TextBox CurRead;
+        private System.Windows.Forms.Label costPerKm;
+        private System.Windows.Forms.Label litPerSweMil;
+        private System.Windows.Forms.Label litPerMetMile;
+        private System.Windows.Forms.Label litPerKm;
+        private System.Windows.Forms.Label kmPerLiter;
     }
 }
 
