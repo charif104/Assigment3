@@ -91,6 +91,7 @@
             this.txtprevRead.Name = "txtprevRead";
             this.txtprevRead.Size = new System.Drawing.Size(100, 20);
             this.txtprevRead.TabIndex = 6;
+            this.txtprevRead.Validated += new System.EventHandler(this.txtprevRead_Validated);
             // 
             // txtCurRead
             // 
@@ -99,6 +100,7 @@
             this.txtCurRead.Name = "txtCurRead";
             this.txtCurRead.Size = new System.Drawing.Size(100, 20);
             this.txtCurRead.TabIndex = 5;
+            this.txtCurRead.Validating += new System.ComponentModel.CancelEventHandler(this.txtCurRead_Validating);
             // 
             // btnCalculateFuel
             // 

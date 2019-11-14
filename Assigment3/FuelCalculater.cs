@@ -111,14 +111,14 @@ namespace Assigment3
             return costPerKM;
         }
 
-        private bool ValidateOdometerValues()
+        public bool ValidateOdometerValues()
         {
-            if(prevReading>= 0  && currReading>=prevReading)
+            if( CurrReading>PrevReading)
             {
                  return true;
             }
             else
-            {
+            {      
                 return false;
             }
         }
